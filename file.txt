@@ -1,0 +1,3 @@
+SELECT Name FROM Customers WHERE EXISTS 
+(SELECT Item FROM Orders 
+WHERE Customers.ID = Orders.ID AND Price < 50);
